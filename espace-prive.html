@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA - COP29 Official Page - Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Mot de passe pour l'espace privé
+        const correctPassword = "Off2143";
+
+        function checkPassword() {
+            const inputPassword = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+            const privateContent = document.getElementById("private-content");
+            const loginForm = document.getElementById("login-form");
+
+            // Vérifie si le mot de passe est correct
+            if (inputPassword === correctPassword) {
+                errorMessage.style.display = "none"; // Cache le message d'erreur
+                loginForm.style.display = "none";   // Cache le formulaire
+                privateContent.style.display = "block"; // Affiche le contenu privé
+            } else {
+                errorMessage.style.display = "block"; // Affiche un message d'erreur
+            }
+        }
+    </script>
+<body>
+    <header>
+        <div class="container">
+            <h1>Équipe Américaine - COP29</h1>
+            <p>Ensemble pour un avenir durable</p>
+<div class="container">
+        <img src="logo.png" style="height: 80px;" />
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="objectifs.html">Objectifs et Projets</a></li>
+            <li><a href="collaboration.html">Collaboration</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="espace-prive.html">Espace Privé</a></li>
+            <li><a href="journal.html">Journal</a></li>
+        </ul>
+    </nav>
+<main>
+        <section id="espace-prive">
+            <h2>Espace Privé - Membres de l'Équipe USA</h2>
+            <div id="login-form">
+                <p>Cette section est réservée aux membres de l'équipe américaine. Veuillez entrer le code pour accéder aux informations.</p>
+                <input type="password" id="password" placeholder="Entrez le code" />
+                <button onclick="checkPassword()">Accéder</button>
+                <p id="error-message" style="color: red; display: none;">Code incorrect. Veuillez réessayer.</p>
+            </div>
+            <div id="private-content" style="display: none;">
+                <h3>Projets et Activités Secrètes</h3>
+                <ul>
+                    <li><strong>Partenariat confidentiel :</strong> Développement d'un programme de captage de CO2 avec des partenaires privés.</li>
+                    <li><strong>Initiative secrète :</strong> Lobbying discret auprès des pays indécis sur l'accord mondial des énergies fossiles.</li>
+                    <li><strong>Objectifs internes :</strong> Réduction des subventions aux énergies fossiles d'ici 2028 (données internes).</li>
+                </ul>
+ <h2>Journal des Activités</h2>
+    <form id="journal-form">
+        <label for="activity-input">Nouvelle Activité :</label>
+        <textarea id="activity-input" placeholder="Ecrivez une activité..." rows="4" cols="50"></textarea>
+        <br />
+        <button type="button" onclick="addActivity()">Ajouter au Journal</button>
+    </form>
+            </div>
+        </section>
+    <footer>
+        <p>&copy; 2024 Équipe Américaine - COP29 | Contact : cop29.usa@gmail.com				Tesla/Space X</p>
+
+    </footer>
+    </main>
+</body>
+</html>
